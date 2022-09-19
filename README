@@ -1,0 +1,46 @@
+README for w4od
+
+w4od (wheels 4 odrive)
+
+The code w4od is listed here without any guarantee to function. It's mostly to peruse
+and use as a person sees fit. I change it constantly while I am modifying my DD deck donkey!
+
+This code will drive a 4 wheel device running two Odrive controllers.
+
+I code with a open source QtCreator IDE (C++) which runs on my PC and my Jetson Nano using 
+LGPLv3 license, a copy of which should be in this git source. I have also included a copy
+of a GPLv3 license for other code that may need to be covered. 
+
+This code is made to run on Jetson Nano(ARM). I have my Nano set up with QtCreator installed
+so I can compile it natively. I find it faster and I didn't want to cross compile on 
+my PC. This code will also run on a PC or Laptop (AMD/INTEL) running Ubuntu. One might have
+some luck running on an RPi 4
+ 
+ The code mostly controls two Odrive 3.6 56v controllers running in ASCII velocity mode which controls 4
+ BLDC 300 watt wheels that have hall sensor encoders which I find that 22nf caps are needed where
+ the sensors enter the Odrive at A,B,Z inputs.
+ 
+ I have commented some of the code out the time of flight (TOF) sensors
+ 
+ One thing that is necessary is the serial numbers of the Odrive devices; if in fact that is the controller
+ a person is using:
+ 
+ QString odrv_2_serial_number = "2080377E5753";  // use your serial numbers
+ QString odrv_3_serial_number = "3675385C3030";  // these are mine:))
+ 
+ 
+ these are found in w4od.h
+ 
+If one changes out their Odrive they would have to change the serial number in w4od.h
+
+On the gui of this app 'w4od.png' I have disabled most items that are not being used
+
+Enough said for now. If you have any questions my email is:
+
+andylaberge@linux.com
+
+I will post any pertinent questions and answers here in the README for now.
+
+Thank you for your time and interest!
+
+Andy
